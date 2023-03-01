@@ -1,0 +1,78 @@
+ghcghchgcghcgh
+hvhghchgcfcfc
+fcgdghfdfdchgfcghfcngcgnhcfhgcvngvngv
+HNOLOGIESANSWERSLEARNNEWSBLOGSVIDEOSINTERVIEW PREPBOOKSEVENTSTRAININGLIVEJOBSMORE
+ASP.NET
+How To Create Login Page In ASP.NET Web Application Using C# And SQL Server
+Krishna Rajput Singh Krishna Rajput Singh  Mar 20, 2019
+  936.8k 11 10
+Download Free .NET & JAVA Files API
+Introduction
+
+This article demonstrates how to create a login page in an ASP.NET Web Application, using C# connectivity by SQL server. This article starts with an introduction of the creation of the database and table in SQL Server. Afterwards, it demonstrates how to design ASP.NET login page. In the end, the article discusses how to create a connection ASp.NET Web Application to SQL Server.
+
+Prerequisites
+
+VS2010/2012/2013/15/17, SQL Server 2005/08/2012
+
+Project used version
+
+VS2013, SQL SERVER 2012
+
+Step 1
+
+Creating a database and a table
+To create a database, write the query in SQL Server
+
+Create database abcd     --Login is my database name
+Use abcd                 --Select database or use database
+Create table Ulogin      --create table Ulogin is my table name
+(
+   UserId varchar(50) primary key not null,   --primary key not accept null value
+   Password varchar(100) not null
+)
+insert into  Ulogin values ('Krish','kk@321')     --insert value in Ulogin table
+Proceed, as shown below.
+
+ASP.NET
+Figure 1
+Step 2
+
+Step 1 is complete. Let’s start design login view in ASP.NET Web Application. I am using a simple design, since desogn is not the purpose of this article. So let’s start by opening VS (any version) and go to File, select New, select Web site. You can also use shortcut key (Shift+Alt+N). When you are done with expanding Solution Explorer, right click on your project name, select add, click Add New Item (for better help, refer to the screenshot given below). Select Web Form, if you want to change Web form name. You can save it as it is. Default.aspx is added in my project.
+
+ASP.NET
+
+ASP.NET
+
+Now, let’s design my default.aspx page in <div >tag insert table, as per the required rows and columns and set the layout style of the table. If you want all tools set in center, go to Table propeties and click Style text align.
+
+ASP.NET
+The source code is given below.
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <table class="auto-style1">
+            <tr>
+                <td colspan="6" style="text-align: center; vertical-align: top">
+</tr>
+</table>
+
+    </div>
+    </form>
+</body>
+</html>
